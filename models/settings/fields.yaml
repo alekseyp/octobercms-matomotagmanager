@@ -1,0 +1,12 @@
+fields:
+    tracker_domain:
+      span: left
+      label: alekseyp.matomotagmanager::lang.settings.tracker_domain.label
+      commentAbove: alekseyp.matomotagmanager::lang.settings.tracker_domain.commentAbove
+      description: alekseyp.matomotagmanager::lang.settings.tracker_domain.description
+      required: true
+    container_id:
+        label: alekseyp.matomotagmanager::lang.settings.container_id.label
+        type: text
+        commentAbove: alekseyp.matomotagmanager::lang.settings.container_id.commentAbove
+        description: alekseyp.matomotagmanager::lang.settings.container_id.description

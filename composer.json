@@ -1,0 +1,16 @@
+{
+    "name": "alekseyp/matomotagmanager-plugin",
+    "type": "october-plugin",
+    "description": "Matomo Tag manager plugin for October CMS.",
+    "keywords": ["october", "cms", "mtm", "matomo", "tagmanager"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AlekseyP"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    }
+}

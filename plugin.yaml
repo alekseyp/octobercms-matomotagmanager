@@ -1,0 +1,6 @@
+plugin:
+    name: 'alekseyp.matomotagmanager::lang.plugin.name'
+    description: 'alekseyp.matomotagmanager::lang.plugin.description'
+    author: AlekseyP
+    icon: icon-area-chart
+    homepage: 'https://github.com/alekseyp/octobercms-matomotagmanager'
