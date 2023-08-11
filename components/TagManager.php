@@ -2,6 +2,7 @@
 
 use AlekseyP\MatomoTagManager\Models\Settings;
 use Cms\Classes\ComponentBase;
+use Cms\Classes\Theme;
 use Lang;
 
 /**
@@ -10,6 +11,11 @@ use Lang;
  */
 class TagManager extends ComponentBase
 {
+    /** @var string $mtmContainerIdThemeSetting */
+    public $mtmContainerIdThemeSetting;
+
+    /** @var string $mtmTrackerDomainThemeSetting */
+    public $mtmTrackerDomainThemeSetting;
 
     /**
      * @return array
@@ -43,7 +49,7 @@ class TagManager extends ComponentBase
      */
     public function containerId()
     {
-        return $this->property('container_id') ?: Settings::get('container_id');
+        return $this->property('container_id') ?: $this->mtmContainerIdThemeSetting ?: Settings::get('container_id');
     }
 
     /**
@@ -51,6 +57,14 @@ class TagManager extends ComponentBase
      */
     public function trackerDomain()
     {
-        return $this->property('tracker_domain') ?: Settings::get('tracker_domain');
+        return $this->property('tracker_domain') ?: $this->mtmTrackerDomainThemeSetting ?: Settings::get('tracker_domain');
+    }
+
+    public function onRun()
+    {
+        $theme = Theme::getActiveTheme();
+        $customSettings = $theme->getCustomData();
+        $this->mtmContainerIdThemeSetting = $customSettings['mtmContainerId'];
+        $this->mtmTrackerDomainThemeSetting = $customSettings['mtmTrackerDomain'];
     }
 }

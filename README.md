@@ -56,8 +56,9 @@ You can also add the component to the file manually and/or override ```container
         {% scripts %}
 	</body>
 	</html>
-	
-	
+
+
+Or you can set the ```container_id``` and ```tracker_domain``` values to customize the theme using the ```mtmContainerId``` and ```mtmTrackerDomain``` keys
 	
 License
 -------
